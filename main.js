@@ -19,12 +19,21 @@ saveAndRender();
 }
 
 function toggleTask(id) {
-  tasks = tasks.map(task =>
-    task.id === id ? { ...task, completed: !task.completed } : task
-  );
+  const newTasks = [];
+for (let task of tasks) {
+  if (task.id === id) {
+        const updatedTask = {
+            ...task,
+            completed: !task.completed
+        };
+        newTasks.push(updatedTask);
+        } else {
+        newTasks.push(task);
+    }
+}
+tasks = newTasks;
   saveAndRender();
 }
-
 function deleteTask(id) {
   tasks = tasks.filter(task => task.id !== id);
   saveAndRender();
