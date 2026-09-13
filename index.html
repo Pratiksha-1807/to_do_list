@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Tasks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="todo-app">
+
+    <header class="todo-header">
+      <h1 class="hero-title">Just Do It</h1>
+      <h2 class="hero-subtitle">My Task List</h2>
+      <p id="task-count">0 of 0 remaining</p>
+    </header>
+
+    <div class="add-task-bar">
+      <input type="text" id="task-input" placeholder="Add a new task..." />
+      <button id="add-btn">+ Add</button>
+    </div>
+
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <ul id="task-list" class="task-list">
+     
+    </ul>
+
+    <footer class="todo-footer">
+      <button id="clear-completed-btn">Clear completed</button>
+    </footer>
+
+  </div>
+   <footer class="site-footer">
+    <p>Made by Pratiksha &middot; 2026</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
