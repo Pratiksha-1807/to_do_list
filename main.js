@@ -64,7 +64,6 @@ function getFilteredTasks() {
   return tasks;
 }
 
-// ---- Rendering ----
 
 function render() {
   const filteredTasks = getFilteredTasks();
@@ -88,7 +87,7 @@ function render() {
         <span class="delete-btn">🗑</span>
       `;
 
-      // Set text safely to avoid HTML injection from user input
+      
       li.querySelector('.task-text').textContent = task.text;
 
       taskList.appendChild(li);
@@ -103,8 +102,6 @@ function saveAndRender() {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   render();
 }
-
-// ---- Event listeners ----
 
 addBtn.addEventListener('click', () => {
   addTask(taskInput.value);
@@ -136,6 +133,4 @@ filterButtons.forEach(btn => {
 });
 
 clearCompletedBtn.addEventListener('click', clearCompleted);
-
-// ---- Initial render ----
 render();
